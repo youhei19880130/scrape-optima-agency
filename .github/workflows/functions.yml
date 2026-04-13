@@ -1,0 +1,34 @@
+name: Deploy Cloud Funcstions
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Authenticate gcloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy Functions
+        run: |
+          gcloud functions deploy getOptimaAgency \
+          --gen2 \
+          --runtime=nodejs22 \
+          --source=. \
+          --entry-point=getOptimaAgency \
+          --trigger-http \
+          --allow-unauthenticated \
+          --timeout=540s \
+          --memory=1GB \
+          --region=asia-northeast1

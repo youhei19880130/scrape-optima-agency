@@ -1,0 +1,36 @@
+{
+  "name": "scrape-optima-agency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "function.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "functions-framework --target=getOptimaAgency",
+    "watch": "npm-watch start",
+    "postinstall": "npx puppeteer browsers install chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youhei19880130/scrape-optima-agency"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youhei19880130/scrape-optima-agency/issues"
+  },
+  "homepage": "https://github.com/youhei19880130/scrape-optima-agency#readme",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^4.0.0",
+    "npm-watch": "^0.13.0",
+    "puppeteer": "^24.40.0"
+  },
+  "watch": {
+    "start": "*.js"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^18.3.1"
+  }
+}
