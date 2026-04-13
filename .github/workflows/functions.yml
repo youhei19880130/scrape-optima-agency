@@ -31,4 +31,5 @@ jobs:
           --allow-unauthenticated \
           --timeout=540s \
           --memory=1GB \
-          --region=asia-northeast1
+          --region=asia-northeast1 \
+          --set-env-vars=TZ=Asia/Tokyo
