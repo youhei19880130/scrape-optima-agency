@@ -22,13 +22,13 @@
   "dependencies": {
     "@google-cloud/functions-framework": "^4.0.0",
     "npm-watch": "^0.13.0",
-    "puppeteer": "^24.40.0"
+    "puppeteer": "^25.1.0"
   },
   "watch": {
     "start": "*.js"
   },
   "engines": {
-    "node": "22"
+    "node": "24"
   },
   "devDependencies": {
     "npm-check-updates": "^18.3.1"
