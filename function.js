@@ -15,7 +15,7 @@ const AD_OPTIONS = 'ul.select2-results__options > li';
 //   price:     1件あたりの単価。売上は管理画面の支払金額ではなく「件数 × 単価」で算出する
 const PRODUCTS = {
     'セルノートサプリメント_縛り無し': {
-        price: 9500,
+        price: 9000,
         positions: [
             11, // 【BV LINE supplement+】コアプロダクト_meta_980円縛り無しオファー_即チャットLP
             12, // ※8/20～新規コード【BV LINE supplement+】コアプロダクト_meta_980円オファー_即チャットLP
